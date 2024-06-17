@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Upload an Image and Apply a Filter</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" name="file" accept="image/*" required class="form-control-file">
+    </div>
+    <div class="form-group">
+        <select name="filter" class="form-control">
+            <option value="grayscale">Grayscale</option>
+            <option value="blur">Blur</option>
+            <option value="sharpen">Sharpen</option>
+            <option value="edge_enhance">Edge Enhance</option>
+            <option value="find_edges">Find Edges</option>
+            <option value="contour">Contour</option>
+            <option value="sepia">Sepia</option>
+            <option value="detail">Detail</option>
+            <option value="emboss">Emboss</option>
+            <option value="smooth">Smooth</option>
+            <option value="edge_enhance_more">Edge Enhance More</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload and Apply Filter</button>
+</form>
+
+<h2>Example Filters</h2>
+<div class="card-container">
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/original.jpg') }}" alt="Original Example">
+        <div class="card-title">Original</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Grayscale.jpg') }}" alt="Grayscale Example">
+        <div class="card-title">Grayscale</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Blur.jpg') }}" alt="Blur Example">
+        <div class="card-title">Blur</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Sharpen.jpg') }}" alt="Sharpen Example">
+        <div class="card-title">Sharpen</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Edge enhance.jpg') }}" alt="Edge Enhance Example">
+        <div class="card-title">Edge Enhance</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Find edges.jpg') }}" alt="Find Edges Example">
+        <div class="card-title">Find Edges</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Contour.jpg') }}" alt="Contour Example">
+        <div class="card-title">Contour</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Sepia.jpg') }}" alt="Sepia Example">
+        <div class="card-title">Sepia</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/detail.jpg') }}" alt="Detail Example">
+        <div class="card-title">Detail</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/emboss.jpg') }}" alt="Emboss Example">
+        <div class="card-title">Emboss</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/Smooth.jpg') }}" alt="Smooth Example">
+        <div class="card-title">Smooth</div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='filtered_images/edgeMore.jpg') }}" alt="Edge Enhance More Example">
+        <div class="card-title">Edge Enhance More</div>
+    </div>
+
+</div>
+{% endblock %}

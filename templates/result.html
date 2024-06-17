@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Filtered Image{% endblock %}
+
+{% block content %}
+<h1>Filtered Image</h1>
+<p>Filter Applied: {{ filter_type }}</p>
+<img src="{{ url_for('static', filename='filtered_images/' + image_file) }}" alt="Filtered Image" class="img-fluid">
+<a href="{{ url_for('download_image', filename=image_file) }}" download="filtered_image.jpg" class="btn btn-success mt-3">Download Filtered Image</a>
+<br><br>
+<a href="/" class="btn btn-secondary">Upload Another Image</a>
+{% endblock %}
