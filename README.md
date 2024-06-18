@@ -2,7 +2,9 @@
 A web app to filter images.
 
 This is the final project for the CS50 course offered by Harvard University. The project demonstrates the use of Python, Flask, and the Pillow library to apply various image filters. The application allows users to upload an image, choose from a variety of filters, and then download the filtered image.
-##Video demo : https://youtu.be/jBPClMkiFcg
+
+
+## Video demo : https://youtu.be/jBPClMkiFcg
 
 ## Project Overview
 
