@@ -73,10 +73,7 @@ The edge enhance more filter significantly improves the contrast of the edges wi
 
 ## Usage Instructions
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone`.
-2. **Install Dependencies**: Navigate to the project directory and install the required dependencies using `pip install -r requirements.txt`.
-3. **Run the Application**: Start the Flask application by running `python app.py`.
-4. **Access the Application**: Open a web browser and go to `http://127.0.0.1:5000` to use the application.
+https://filterin-3803fb89725a.herokuapp.com/
 
 ## Contact
 
